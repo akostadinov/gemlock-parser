@@ -412,6 +412,9 @@ class GemfileLockParser:
         for gem in self.all_gems.values():
             gem.refine()
 
+        if self.all_gems['bundler'] and self.bundled_with:
+            self.all_gems['bundler'].version = self.bundled_with
+
     def get_or_create(self, name, version=None, platform=None):
         """
         Return an existing gem if it exists or creates a new one.
@@ -454,8 +457,6 @@ class GemfileLockParser:
         spec_sub_dep = SPEC_SUB_DEPS(line)
         if spec_sub_dep:
             name = spec_sub_dep.group('name')
-            if name == 'bundler':
-                return
             # second level dep is always a version constraint
             requirements = spec_sub_dep.group('version') or []
             if requirements:

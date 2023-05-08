@@ -1,0 +1,40 @@
+[
+  {
+    "name": "ast",
+    "version": "2.4.2",
+    "platform": "ruby",
+    "pinned": false,
+    "remote": "https://rubygems.org/",
+    "type": "GEM",
+    "path": null,
+    "revision": null,
+    "ref": null,
+    "branch": null,
+    "submodules": null,
+    "tag": null,
+    "requirements": [],
+    "dependencies": {
+      "ast@2.4.2": {}
+    }
+  },
+  {
+    "name": "bundler",
+    "version": "2.0.1",
+    "platform": null,
+    "pinned": false,
+    "remote": null,
+    "type": null,
+    "path": null,
+    "revision": null,
+    "ref": null,
+    "branch": null,
+    "submodules": null,
+    "tag": null,
+    "requirements": [
+      "= 2.0.1"
+    ],
+    "dependencies": {
+      "bundler@2.0.1": {}
+    }
+  }
+]
